@@ -1,5 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import { socialMedia } from "@/data";
+import { email, socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base  mx-auto -mb-4">
             Have an idea? Let’s make it happen. Reach out and let's create something amazing!
           </p>
-          <a href="mailto:contact@jsmastery.pro">
+          <a href={`mailto:${email}`}>
             <MagicButton
               title="Let's get in touch"
               icon={<FaLocationArrow />}
@@ -29,12 +29,14 @@ const Footer = () => {
         </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
-            <div
+            <a href={info.href} target="_blank">
+              <div
               key={info.id}
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
               <img src={info.img} alt="icons" width={20} height={20} />
             </div>
+            </a>
           ))}
         </div>
       </div>

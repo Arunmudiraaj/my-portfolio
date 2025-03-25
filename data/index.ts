@@ -1,5 +1,7 @@
+export const email = "arunmudiraj1807@gmail.com";
+
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "About", link: "#knowMoreAboutMe" },
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
@@ -125,14 +127,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://github.com/Arunmudiraaj"
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/linkedIn.svg",
+    href: "https://www.linkedin.com/in/arun-mudiraj/"
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/mail.svg",
+    href: `mailto:${email}`
   },
 ];
 

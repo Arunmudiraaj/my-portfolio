@@ -5,22 +5,21 @@ const WorkExperience: React.FC = () => {
 
   const data = [
     {
-      title: "Full Stack Developer - Techpearl",
+      title: "Full Stack Developer",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Worked as a <strong>Full Stack Developer</strong> at <strong>Techpearl Software Pvt Ltd</strong> (2023 - 2025), contributing to the development of <strong>Work Order Scheduling</strong> and <strong>Image Annotation Tool</strong> for <strong>ConMet</strong>, optimizing manufacturing processes and enhancing data labeling efficiency.
+            <strong>Techpearl Software Pvt Ltd (2023 - Present)</strong> – Spearheaded the development of <strong>Work Order Scheduling</strong> and <strong>Image Annotation Tool</strong> for <strong>ConMet</strong>, a key client, optimizing manufacturing and data labeling workflows.
           </p>
           <div className="mb-4">
             <p className="text-purple font-semibold text-sm md:text-base mb-2">
-              🚀 Work Order Scheduling System
+              🚀 Work Order Scheduling
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Optimized <strong>CNC machine operations</strong>, reducing idle time by <strong>25%</strong> and increasing production efficiency by <strong>15%</strong>.</li>
-              <li>Developed an algorithm to <strong>schedule work orders</strong> based on priority, ensuring efficient machine utilization.</li>
-              <li>Integrated <strong>SAP & MES APIs</strong> to automate work order imports and scheduling.</li>
-              <li>Implemented <strong>secure authentication</strong> with JWT and built a <strong>role-based user management system</strong> for admins.</li>
-              <li>Built a <strong>responsive UI</strong> using reusable React components, improving development efficiency.</li>
+              <li>Boosted <strong>production efficiency by 15%</strong>, reducing CNC idle time by <strong>25%</strong> through optimized scheduling.</li>
+              <li>Developed a <strong>rule-based scheduling algorithm</strong> to enhance work order processing and machine utilization.</li>
+              <li>Automated workflows via <strong>SAP & MES API integration</strong>, streamlining data flow and scheduling.</li>
+
             </ul>
           </div>
           <div>
@@ -28,10 +27,9 @@ const WorkExperience: React.FC = () => {
               🎯 Image Annotation Tool
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Developed an <strong>image annotation tool</strong> allowing users to draw bounding boxes and obtain coordinates, streamlining object detection and data labeling.</li>
-              <li>Rebuilt the complete UI with a new design, leading to a <strong>30% reduction in loading time</strong> and improved user experience.</li>
-              <li>Added advanced features like <strong>grouping bounding boxes, PDF annotation, and exporting data as CSV/XML</strong>.</li>
-              <li>Utilized <strong>Git & BitBucket</strong> for version control and efficient code collaboration.</li>
+              <li>Developed an <strong>intuitive annotation tool</strong> improving object detection workflows.</li>
+              <li>Revamped UI, cutting load times by <strong>30%</strong> and enhancing UX.</li>
+              <li>Added <strong>advanced annotations</strong>: grouping, PDF markup, CSV/XML export.</li>
             </ul>
           </div>
         </div>
@@ -42,14 +40,14 @@ const WorkExperience: React.FC = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Completed a <strong>Frontend Developer Trainee</strong> program at <strong>Sharpener</strong> (Jan 2023 – Aug 2023), mastering <strong>Data Structures & Algorithms (DSA)</strong>, <strong>React.js</strong>, and the <strong>Software Development Lifecycle (SDLC)</strong>.
+            <strong>Sharpener (Jan-Aug 2023)</strong> – Built scalable React apps while mastering <strong>DSA</strong>, and modern frontend tech.
           </p>
           <div className="mb-4">
             <p className="text-purple font-semibold text-sm md:text-base mb-2">
               🚀 LinkedIn Clone
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Developed a <strong>full-fledged LinkedIn clone</strong> with interactive features like <strong>media posting, comments, Google login, and infinite scroll</strong>.</li>
+              <li>Developed key features: <strong>Google login, media posts, comments, infinite scroll</strong>.</li>
             </ul>
           </div>
           <div>
@@ -57,7 +55,7 @@ const WorkExperience: React.FC = () => {
               🎯 Hackathon Project - Mailbox Client
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Built a <strong>Mailbox Client</strong> application that enables users to <strong>send emails</strong> to other registered users.</li>
+              <li>Built a <strong>Mailbox Client</strong> enabling secure in-app email communication.</li>
             </ul>
           </div>
         </div>
@@ -68,16 +66,16 @@ const WorkExperience: React.FC = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Continuously exploring new technologies and building projects to enhance my <strong>Full Stack Development</strong> skills.
+            Passionate about <strong>Full Stack Development</strong>, constantly building projects.
           </p>
           <div className="mb-4">
             <p className="text-purple font-semibold text-sm md:text-base mb-2">
               🚀 Projects Built
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Developed a <strong>Snake Game</strong> using only <strong>HTML, CSS, and JavaScript</strong>, focusing on fundamental game logic.</li>
-              <li>Designed a **Flipkart Clone UI**, replicating a modern e-commerce interface.</li>
-              <li>Built an <strong>Expense Tracker</strong> with features like dynamic expense categories and local storage persistence.</li>
+              <li><strong>Snake Game</strong> (Pure HTML, CSS, JS) - Focused on core game logic.</li>
+              <li><strong>Flipkart UI Clone</strong> - Modern e-commerce interface.</li>
+              <li><strong>Expense Tracker</strong> - Categorized tracking with local storage.</li>
             </ul>
           </div>
         </div>
@@ -88,24 +86,25 @@ const WorkExperience: React.FC = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Completed my <strong>Bachelor of Technology (B.Tech) in Electronics</strong> from <strong>St. Peter’s Engineering College</strong> (2018 – 2022).
+            <strong>St. Peter’s Engineering College (2018-2022)</strong> – Graduated in <strong>Electronics</strong>, self-taught Web Development alongside coursework.
           </p>
           <div className="mb-4">
             <p className="text-purple font-semibold text-sm md:text-base mb-2">
               🎓 Key Learnings
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              <li>Gained a strong foundation in <strong>Computer Science fundamentals</strong>, including <strong>Data Structures, Algorithms, and Object-Oriented Programming</strong>.</li>
-              <li>Developed a keen interest in <strong>Software Development</strong>, leading me to self-learn <strong>Web Development</strong> alongside my coursework.</li>
+              <li>Deep understanding of <strong>DSA, OOP, and Computer Science fundamentals</strong>.</li>
             </ul>
           </div>
         </div>
       ),
-    }
+    },
   ];
 
+
+
   return (
-    <section id="workExperience" className="py-20">
+    <section id="workExperience" className="pt-20">
       <h1 className="heading">
         My
         <span className="text-purple"> Work Experience</span>

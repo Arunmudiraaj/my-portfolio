@@ -41,7 +41,7 @@ const Grid = () => {
   }, []);
 
   return (
-    <section id='knowMoreAboutMe'>
+    <section id='knowMoreAboutMe' className="pt-20">
       <h1 className="heading">
         Know More
         <span className="text-purple"> About Me</span>
