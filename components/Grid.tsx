@@ -29,7 +29,6 @@ const Grid = () => {
       try {
         const { data } = await axios.get<ProcessedGame[]>("/api/lichess");
         setChessGames(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching Lichess games:", error);
       } finally {
