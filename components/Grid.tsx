@@ -2,7 +2,6 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Image from 'next/image';
 import { motion } from "framer-motion";
 
 export interface ProcessedGame {
@@ -74,12 +73,10 @@ const Grid = () => {
         <div className={`${gridItemStyles} p-0 col-span-6 lg:col-span-2`}>
           <div className="relative w-full h-full overflow-hidden shadow-lg group">
             <div className="absolute inset-0 transition-transform duration-200 group-hover:scale-105">
-              <Image
+              <img
                 src="/nature.jpg"
                 alt="Beautiful Nature Scene"
-                layout="fill"
-                objectFit="cover"
-                className="brightness-75"
+                className="brightness-75 w-full h-full object-cover"
               />
             </div>
             {/* Overlay Text */}
@@ -93,15 +90,14 @@ const Grid = () => {
             </div>
           </div>
         </div>
+
         {/* Drawing grid item */}
         <div className={`${gridItemStyles} col-span-6 lg:col-span-3`} >
           <div className="relative w-full h-full overflow-hidden shadow-lg">
-            <Image
+            <img
               src="/drawing.jpg"
               alt="Sketchbook and pencil"
-              layout="fill"
-              objectFit="cover"
-              className="absolute hover:scale-105 duration-200"
+              className="absolute hover:scale-105 duration-200  w-full h-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4">
               <h2 className="text-white text-lg font-semibold">🎨 Sketching & Doodling</h2>

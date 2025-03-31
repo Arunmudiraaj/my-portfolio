@@ -1,9 +1,9 @@
 export const email = "arunmudiraj1807@gmail.com";
 
 export const navItems = [
-  { name: "About", link: "#knowMoreAboutMe" },
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#skills" },
+  { name: "About", link: "#knowMoreAboutMe" },
   { name: "Contact", link: "#contact" },
 ];
 

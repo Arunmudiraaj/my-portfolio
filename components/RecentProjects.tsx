@@ -2,7 +2,6 @@
 import { FaGithub, FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
-import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -42,7 +41,7 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <Image className="w-8 h-8 invert" src={icon} width={40} height={40} alt="icon" />
+                      <img className="w-8 h-8 invert" src={icon} width={40} height={40} alt="icon" />
                     </div>
                   ))}
 
@@ -64,7 +63,7 @@ const RecentProjects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-gray-800 text-white px-2 py-1 rounded-lg transition hover:bg-gray-700"
                   >
-                    <span>GitHub</span>
+                    <span>Code</span>
                     <FaGithub />
                   </a>}
                 </div>
