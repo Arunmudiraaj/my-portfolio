@@ -10,9 +10,9 @@ const Footer = () => {
           <span className="text-purple">Contact</span> Me
         </h1>
         <div className="w-full py-14 px-6 text-center  text-white">
-          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">💬 Let’s Build Something Great!</h2>
+          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">💬 Let&apos;s Build Something Great!</h2>
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base  mx-auto -mb-4">
-            Have an idea? Let’s make it happen. Reach out and let's create something amazing!
+            Have an idea? Let&apos;s make it happen. Reach out and let&apos;s create something amazing!
           </p>
           <a href={`mailto:${email}`}>
             <MagicButton

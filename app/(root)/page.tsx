@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { ModeToggle } from "@/components/ui/ModeToggle";
+// import { ModeToggle } from "@/components/ui/ModeToggle";
 import WorkExperience from "@/components/WorkExperience";
 import { navItems } from "@/data";
 

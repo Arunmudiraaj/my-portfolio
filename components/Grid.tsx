@@ -3,15 +3,45 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { lichessUrl, lichessUserName } from "@/data";
 
-export interface ProcessedGame {
+interface Player {
+  user?: {
+    name: string;
+  };
+  result?: string;
+}
+
+interface GameData {
+  id: string;
+  speed: string;
+  winner?: string;
+  opening?: {
+    name: string;
+  };
+  players: {
+    white?: Player;
+    black?: Player;
+  };
+}
+
+interface Game {
   id: string;
   link: string;
   opponent: string;
   result: string;
   opening: string;
-  timeControl: string;
 }
+
+const PIECES = {
+  WHITE: "white",
+  BLACK: "black",
+}
+const RESULT = {
+  WIN: "Win",
+  LOSS: "Loss",
+}
+const UNKNOWN = "Unknown"
 
 export const Spinner = ({ className }: { className?: string }) => {
   return <div className={`w-12 h-12 border-4 border-gray-300 dark:border-gray-600 border-t-transparent dark:border-t-white rounded-full animate-spin ${className}`}></div>
@@ -19,22 +49,48 @@ export const Spinner = ({ className }: { className?: string }) => {
 
 const Grid = () => {
 
-  const [chessGames, setChessGames] = useState<ProcessedGame[]>([]);
+  const [chessGames, setChessGames] = useState<Game[]>([]);
   const [chessGamesLoading, setChessGamesLoading] = useState<boolean>(true);
   const gridItemStyles = `min-h-[300px] border-gray-500 relative overflow-hidden rounded-3xl border border-slate-700`
 
-  useEffect(() => {
-    const fetchChessGames = async () => {
-      try {
-        const { data } = await axios.get<ProcessedGame[]>("/api/lichess");
-        setChessGames(data);
-      } catch (error) {
-        console.error("Error fetching Lichess games:", error);
-      } finally {
-        setChessGamesLoading(false);
-      }
-    };
+  const fetchChessGames = async () => {
+    try {
 
+      const username = lichessUserName
+      const url = lichessUrl(username);
+      const response = await axios.get(url, { headers: { Accept: "application/x-ndjson" }, });
+
+      const textData = response.data;
+      const games: GameData[] = textData
+        ?.trim()
+        ?.split("\n")
+        ?.map((line: string) => JSON.parse(line) as GameData) || [];
+
+      const recentGames: Game[] = games.map((game) => {
+        const whitePlayer = game.players.white?.user?.name || UNKNOWN
+        const blackPlayer = game.players.black?.user?.name || UNKNOWN
+        const isWhite = whitePlayer.toLowerCase() === username;
+        const opponent = isWhite ? blackPlayer : whitePlayer;
+        const result = isWhite ? (game?.winner === PIECES.WHITE ? RESULT.WIN : RESULT.LOSS) : game?.winner === PIECES.BLACK ? RESULT.WIN : RESULT.LOSS;
+
+        return {
+          id: game.id,
+          link: `https://lichess.org/${game.id}`,
+          opponent,
+          result,
+          opening: game.opening?.name || "Unknown Opening",
+        };
+      });
+
+      setChessGames(recentGames);
+    } catch (error) {
+      console.error("Error fetching Lichess games:", error);
+    } finally {
+      setChessGamesLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchChessGames();
   }, []);
 
@@ -51,7 +107,7 @@ const Grid = () => {
             Beyond Code: <span className="text-purple">Chess</span> ♟️
           </div>
           <p className={`font-sans text-neutral-700 dark:text-neutral-300 text-sm mt-1`}>
-            When I'm not coding, I'm making moves on the chessboard. These games are fetched <strong>live</strong> from my recent Lichess matches. Check out my latest battles:
+            When I&apos;m not coding, I&apos;m making moves on the chessboard. These games are fetched <strong>live</strong> from my recent Lichess matches. Check out my latest battles:
           </p>
           {chessGamesLoading ? (
             <Spinner className="mx-auto mt-12" />
@@ -101,7 +157,7 @@ const Grid = () => {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4">
               <h2 className="text-white text-lg font-semibold">🎨 Sketching & Doodling</h2>
-              <p className="text-gray-300 text-sm">When I'm not coding, I love to sketch and bring ideas to life on paper.</p>
+              <p className="text-gray-300 text-sm">When I&apos;m not coding, I love to sketch and bring ideas to life on paper.</p>
             </div>
           </div>
         </div>
@@ -115,7 +171,7 @@ const Grid = () => {
               className="text-center"
             >
               <p className="text-2xl font-semibold italic max-w-2xl mx-auto">
-                "Coding is the closest thing we have to superpowers."
+                &quot;Coding is the closest thing we have to superpowers.&quot;
               </p>
               <span className="block mt-3 text-lg text-gray-400">— Drew Houston</span>
             </motion.div>

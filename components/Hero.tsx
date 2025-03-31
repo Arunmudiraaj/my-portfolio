@@ -32,7 +32,7 @@ const Hero = () => {
               words="Transforming Concepts into Seamless User Experiences"
             />
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-              Hi, I'm <span className='text-purple'>Arun</span>, a Full Stack Developer from India, passionate about building user-centric solutions.
+              Hi, I&apos;m <span className='text-purple'>Arun</span>, a Full Stack Developer from India, passionate about building user-centric solutions.
             </p>
             <div className='flex gap-4'>
               <a
