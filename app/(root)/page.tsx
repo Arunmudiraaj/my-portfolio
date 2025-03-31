@@ -12,9 +12,10 @@ export default function Home() {
   return (
     <main className="relative flex flex-col items-center px-5 mx-auto overflow-hidden bg-black-100">
       <div className="max-w-7xl w-full">
-        <div className="fixed top-5 right-5 z-50">
+        {/* removed dark/light mode temporarily */}
+        {/* <div className="fixed top-5 right-5 z-50">
           <ModeToggle/>
-        </div>
+        </div> */}
         <FloatingNav navItems={navItems}/>
         <Hero/>
         <RecentProjects/>
