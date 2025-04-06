@@ -38,12 +38,6 @@ export function ModeToggle() {
         >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme(THEME_COLORS.SYSTEM)}
-          className={theme === THEME_COLORS.SYSTEM ? "font-bold" : ""}
-        >
-          System
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

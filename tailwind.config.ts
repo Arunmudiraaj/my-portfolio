@@ -176,7 +176,10 @@ const config = {
 				fourth: 'moveHorizontal 40s ease infinite',
 				fifth: 'moveInCircle 20s ease infinite',
 				scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
-			}
+			},
+			screens: {
+				xs: '400px', // custom "xs" breakpoint
+			  },
 		}
 	},
 	plugins: [

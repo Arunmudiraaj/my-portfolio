@@ -31,7 +31,7 @@ const RecentProjects = () => {
                 {item.des}
               </p>
               {/* Tech Icons */}
-              <div className="flex items-center justify-between mt-4">
+              <div className="flex items-center justify-between mt-4 flex-col xs:flex-row">
                 <div className="flex items-center gap-1">
                   {item.iconLists.map((icon, index) => (
                     <div
@@ -58,7 +58,7 @@ const RecentProjects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white px-2 py-1 rounded-lg transition hover:bg-gray-300 dark:hover:bg-gray-700"
                     >
-                      <span>Live Demo</span>
+                      <span>Live</span>
                       <FaLocationArrow />
                     </a>}
                   {item.githubLink &&
