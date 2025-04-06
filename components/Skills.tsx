@@ -10,7 +10,7 @@ const Skills = () => {
     <section id="skills" className="py-20">
       <h1 className="heading">
         My
-        <span className="text-purple"> Toolbox</span>
+        <span className="text-purple-light dark:text-purple-dark"> Toolbox</span>
       </h1>
       <div className="flex flex-col items-center max-lg:mt-10">
         <div

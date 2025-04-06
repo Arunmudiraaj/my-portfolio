@@ -8,7 +8,7 @@ const RecentProjects = () => {
     <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        <span className="text-purple-light dark:text-purple-dark">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map((item) => (
@@ -32,40 +32,45 @@ const RecentProjects = () => {
               </p>
               {/* Tech Icons */}
               <div className="flex items-center justify-between mt-4">
-                <div className="flex items-center">
+                <div className="flex items-center gap-1">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      className="border rounded-full bg-gray-100 border-gray-300 dark:bg-black dark:border-white/20 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img className="w-8 h-8 invert" src={icon} width={40} height={40} alt="icon" />
+                      <img
+                        className="w-8 h-8 dark:invert"
+                        src={icon}
+                        width={40}
+                        height={40}
+                        alt="icon"
+                      />
                     </div>
                   ))}
-
                 </div>
+
                 {/* Buttons Section */}
                 <div className="flex gap-2 mt-3">
-                  {item.liveLink && <a
-                    href={item.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-gray-800 text-white px-2 py-1 rounded-lg transition hover:bg-gray-700"
-                  >
-                    <span>Live Demo</span>
-                    <FaLocationArrow />
-                  </a>}
-                  {item.githubLink && <a
-                    href={item.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-gray-800 text-white px-2 py-1 rounded-lg transition hover:bg-gray-700"
-                  >
-                    <span>Code</span>
-                    <FaGithub />
-                  </a>}
+                  {item.liveLink &&
+                    <a
+                      href={item.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white px-2 py-1 rounded-lg transition hover:bg-gray-300 dark:hover:bg-gray-700"
+                    >
+                      <span>Live Demo</span>
+                      <FaLocationArrow />
+                    </a>}
+                  {item.githubLink &&
+                    <a
+                      href={item.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white px-2 py-1 rounded-lg transition hover:bg-gray-300 dark:hover:bg-gray-700"
+                    >
+                      <span>Code</span>
+                      <FaGithub />
+                    </a>}
                 </div>
               </div>
             </BackgroundGradient>

@@ -86,32 +86,30 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li
-            //   change md:w-[450px] to md:w-[60vw] , px-8 py-6 to p-16, border-slate-700 to border-slate-800                 md:p-16
-            className="relative rounded-2xl border 
-             flex-shrink-0 border-slate-700 px-20 py-6 flex flex-col items-center justify-center gap-2"
-            style={{
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-            }}
-            key={idx}
-          >
-            <div
-              aria-hidden="true"
-              className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5"
-            />
-            {/* change text color, text-lg */}
-            <img
-              src={item.src}
-              alt={item.name}
-              width={70}
-              height={70}
-              className="invert w-14 h-14 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-26 lg:h-26"
-            />
-            <span>{item.name}</span>
-          </li>
-        ))}
+  <li
+    className="relative rounded-2xl border 
+     flex-shrink-0 border-slate-700 dark:border-slate-800 px-20 py-6 flex flex-col items-center justify-center gap-2
+     bg-white dark:bg-[rgb(4,7,29)]"
+    style={{
+      backgroundImage: "none",
+      background: "transparent",
+    }}
+    key={idx}
+  >
+    <div
+      aria-hidden="true"
+      className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5"
+    />
+    <img
+      src={item.src}
+      alt={item.name}
+      width={70}
+      height={70}
+      className="w-14 h-14 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-26 lg:h-26 dark:invert"
+    />
+    <span className="text-slate-800 dark:text-slate-200">{item.name}</span>
+  </li>
+))}
       </ul>
     </div>
   );

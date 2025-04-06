@@ -98,13 +98,13 @@ const Grid = () => {
     <section id='knowMoreAboutMe' className="pt-20">
       <h1 className="heading">
         Know More
-        <span className="text-purple"> About Me</span>
+        <span className="text-purple-light dark:text-purple-dark"> About Me</span>
       </h1>
       <div className='grid grid-cols-6 gap-4 lg:gap-8 mx-auto py-20'>
         {/* Chess */}
         <div className={`${gridItemStyles} col-span-6 lg:col-span-4 p-5 lg:p-10`}>
           <div className={`font-sans text-lg lg:text-3xl font-bold`}>
-            Beyond Code: <span className="text-purple">Chess</span> ♟️
+            Beyond Code: <span className="text-purple-light dark:text-purple-dark">Chess</span> ♟️
           </div>
           <p className={`font-sans text-neutral-700 dark:text-neutral-300 text-sm mt-1`}>
             When I&apos;m not coding, I&apos;m making moves on the chessboard. These games are fetched <strong>live</strong> from my recent Lichess matches. Check out my latest battles:

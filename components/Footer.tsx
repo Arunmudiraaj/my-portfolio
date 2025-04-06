@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          <span className="text-purple">Contact</span> Me
+          <span className="text-purple-light dark:text-purple-dark">Contact</span> Me
         </h1>
         <div className="w-full py-14 px-6 text-center  text-white">
           <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">💬 Let&apos;s Build Something Great!</h2>
@@ -31,10 +31,20 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <a key={info.id} href={info.href} target="_blank">
               <div
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 
+              bg-white bg-opacity-75 dark:bg-black-200 dark:bg-opacity-75 
+              rounded-lg 
+              border border-gray-200 dark:border-black-300
+              hover:bg-opacity-90 dark:hover:bg-opacity-90 transition-all"
+              >
+                <img
+                  src={info.img}
+                  alt="icons"
+                  width={20}
+                  height={20}
+                  className="dark:invert-[0.85]"
+                />
+              </div>
             </a>
           ))}
         </div>

@@ -12,7 +12,7 @@ const WorkExperience: React.FC = () => {
             <strong>Techpearl Software Pvt Ltd (2023 - Present)</strong> – Spearheaded the development of <strong>Work Order Scheduling</strong> and <strong>Image Annotation Tool</strong> for <strong>ConMet</strong>, a key client, optimizing manufacturing and data labeling workflows.
           </p>
           <div className="mb-4">
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🚀 Work Order Scheduling
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -23,7 +23,7 @@ const WorkExperience: React.FC = () => {
             </ul>
           </div>
           <div>
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🎯 Image Annotation Tool
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -43,7 +43,7 @@ const WorkExperience: React.FC = () => {
             <strong>Sharpener (Jan-Aug 2023)</strong> – Built scalable React apps while mastering <strong>DSA</strong>, and modern frontend tech.
           </p>
           <div className="mb-4">
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🚀 LinkedIn Clone
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -51,7 +51,7 @@ const WorkExperience: React.FC = () => {
             </ul>
           </div>
           <div>
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🎯 Hackathon Project - Mailbox Client
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -69,7 +69,7 @@ const WorkExperience: React.FC = () => {
             Passionate about <strong>Full Stack Development</strong>, constantly building projects.
           </p>
           <div className="mb-4">
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🚀 Projects Built
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -89,7 +89,7 @@ const WorkExperience: React.FC = () => {
             <strong>St. Peter’s Engineering College (2018-2022)</strong> – Graduated in <strong>Electronics</strong>, self-taught Web Development alongside coursework.
           </p>
           <div className="mb-4">
-            <p className="text-purple font-semibold text-sm md:text-base mb-2">
+            <p className="text-purple-light dark:text-purple-dark font-semibold text-sm md:text-base mb-2">
               🎓 Key Learnings
             </p>
             <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -107,10 +107,10 @@ const WorkExperience: React.FC = () => {
     <section id="workExperience" className="pt-20">
       <h1 className="heading">
         My
-        <span className="text-purple"> Work Experience</span>
+        <span className="text-purple-light dark:text-purple-dark"> Work Experience</span>
       </h1>
       <div
-        className="flex flex-col items-center max-lg:mt-10 overflow-y-auto relative"
+        className="flex flex-col items-center max-lg:mt-10 relative"
       >
         <Timeline data={data} />
       </div>
