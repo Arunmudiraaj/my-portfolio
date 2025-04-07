@@ -41,7 +41,8 @@ export const projects = [
     des: "You're looking at it! Built with Next.js, Tailwind CSS, and Aceternity, this portfolio is a showcase of my projects, skills, and interests—crafted for both aesthetics and performance. 🚀",
     img: "/portfolio.png",
     iconLists: ["/skillIcons/nextdotjs.svg", "/skillIcons/typescript.svg", "/skillIcons/tailwindcss.svg"],
-    githubLink: "#"
+    liveLink: "https://arun18-dev.vercel.app/",
+    githubLink: "https://github.com/Arunmudiraaj/my-portfolio"
   },
 ];
 
